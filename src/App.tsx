@@ -10,9 +10,20 @@ import { ExamplesScreens } from "./screens/ExamplesScreen";
 import { HomeScreen } from "./screens/HomeScreen";
 import { TokenListNavigator } from "./screens/TokenNavigator";
 
+import * as metaplex from "@metaplex/js"
+import * as web3 from "@solana/web3.js"
+import * as splStake from "@solana/spl-stake-pool"
+import * as unstakeIt from "@unstake-it/sol"
+
 const Tab = createBottomTabNavigator();
 
 function TabNavigator() {
+
+  console.log(new web3.Keypair().publicKey.toBase58())
+  console.log(metaplex)
+  console.log(splStake)
+  console.log(unstakeIt)
+
   return (
     <Tab.Navigator
       initialRouteName="Home"
